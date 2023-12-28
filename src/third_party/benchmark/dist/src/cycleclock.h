@@ -193,6 +193,10 @@ inline BENCHMARK_ALWAYS_INLINE int64_t Now() {
   asm volatile("rdcycle %0" : "=r"(cycles));
   return cycles;
 #endif
+#elif defined(__loongarch64) // LoongArch64
+  uint64_t cycles;
+  asm volatile("rdtime.d %0, $zero" : "=r"(cycles));
+  return cycles;
 #else
 // The soft failover to a generic implementation is automatic only for ARM.
 // For other platforms the developer is expected to make an attempt to create

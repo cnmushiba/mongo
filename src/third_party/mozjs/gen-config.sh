@@ -32,6 +32,9 @@ case "$_Path" in
     "platform/aarch64/linux")
         _CONFIG_OPTS="--host=aarch64-linux"
     ;;
+    "platform/loongarch64/linux")
+        _CONFIG_OPTS="--host=loongarch64-linux"
+    ;;
     "platform/ppc64le/freebsd")
         _CONFIG_OPTS="--host=ppc64le-freebsd"
     ;;

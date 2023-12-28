@@ -381,6 +381,8 @@ class AssignAttributeStartEnd {
 # elif (defined(__aarch64__))
 #   define CACHELINE_ALIGNED __attribute__((aligned(64)))
     // implementation specific, Cortex-A53 and 57 should have 64 bytes
+# elif (defined(__loongarch64))
+#   define CACHELINE_ALIGNED __attribute__((aligned(64)))
 # elif (defined(__s390__))
 #   define CACHELINE_ALIGNED __attribute__((aligned(256)))
 # elif (defined(__riscv) && __riscv_xlen == 64)

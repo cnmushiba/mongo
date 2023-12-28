@@ -64,6 +64,11 @@
 #  define HAS_64BIT_LOCKFREE
 #endif
 
+#if defined(__loongarch64)
+#  define HAS_64BIT_ATOMICS
+#  define HAS_64BIT_LOCKFREE
+#endif
+
 #if defined(__riscv) && __riscv_xlen == 64
 #  define HAS_64BIT_ATOMICS
 #  define HAS_64BIT_LOCKFREE

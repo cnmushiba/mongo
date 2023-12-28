@@ -1849,6 +1849,7 @@ processor_macros = {
     'emscripten': {'endian': 'little', 'check': '(defined(__EMSCRIPTEN__))'},
     'ppc64le': {'endian': 'little', 'check': '(defined(__powerpc64__))'},
     'riscv64': {'endian': 'little', 'check': '(defined(__riscv)) && (__riscv_xlen == 64)'},
+    'loongarch64': {'endian': 'little', 'check': '(defined(__loongarch64))'},
     's390x': {'endian': 'big', 'check': '(defined(__s390x__))'},
     'x86_64': {'endian': 'little', 'check': '(defined(__x86_64) || defined(_M_AMD64))'},
 }

@@ -45,6 +45,7 @@ class RegExpMacroAssembler {
   V(ARM64)                      \
   V(MIPS)                       \
   V(RISCV)                      \
+  V(LOONGARCH64)                      \
   V(S390)                       \
   V(PPC)                        \
   V(X64)                        \

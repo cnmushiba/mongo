@@ -61,6 +61,10 @@
 /* See https://jira.mongodb.org/browse/WT-6872 for details on using `isb` instead of `yield`. */
 #define MONGO_YIELD_CORE_FOR_SMT() __asm__ volatile("isb" ::: "memory")
 
+#elif defined(__loongarch64)
+
+#define MONGO_YIELD_CORE_FOR_SMT() __asm__ volatile("dbar 0" ::: "memory")
+
 #elif defined(__s390x__)
 
 #define MONGO_YIELD_CORE_FOR_SMT() __asm__ volatile("lr 0,0" ::: "memory")
